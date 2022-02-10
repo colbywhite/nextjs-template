@@ -2,9 +2,10 @@
   "name": "nextjs-template",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "prepreview": "npm run build",
+    "preview": "next start",
     "build": "next build",
-    "start": "next start",
+    "start": "next dev",
     "lint": "next lint"
   },
   "dependencies": {
