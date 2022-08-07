@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 
 const Home: NextPage = () => {
   return (
-    <Container className="max-w-xl flex flex-col justify-around gap-10 py-2">
+    <Container className="w-full flex flex-col justify-around gap-10 py-2">
       <Header/>
       <Container component="main" className="flex flex-col gap-5 justify-between">
         <Typography variant="body1">
