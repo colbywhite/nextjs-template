@@ -4,12 +4,33 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
-import logo from '../public/nextjs.svg';
+import nextLogo from '../public/nextjs.svg';
+import githubLogo from '../public/github.png';
+import Link from '@mui/material/Link';
 
 function Header() {
   return (
-    <Box component="header" className="flex flex-row justify-center">
-      <Image src={logo} className="h-28 pointer-events-none" alt="logo"/>
+    <Box component="header" className="flex flex-row justify-between">
+      <div className="h-10 w-10 pointer-events-none relative">
+        <Image src={nextLogo} alt="Next.js logo" layout="fill"/>
+      </div>
+      <Typography variant="h6" component="p">Next.js Template</Typography>
+    </Box>
+  );
+}
+
+function Footer() {
+  return (
+    <Box component="footer" className="flex flex-row justify-between">
+      <Typography variant="subtitle2" component="p">
+        Created by{' '}
+        <Link href="https://github.com/colbywhite">Colby M. White</Link>
+      </Typography>
+      <Link href="https://github.com/colbywhite/nextjs-template">
+        <div className="h-5 w-5 pointer-events-none relative">
+          <Image src={githubLogo} alt="GitHub logo" layout="fill"/>
+        </div>
+      </Link>
     </Box>
   );
 }
@@ -17,7 +38,7 @@ function Header() {
 
 const Home: NextPage = () => {
   return (
-    <Container className="max-w-xl">
+    <Container className="max-w-xl flex flex-col justify-around gap-10 py-2">
       <Header/>
       <Container component="main" className="flex flex-col gap-5 justify-between">
         <Typography variant="body1">
@@ -34,8 +55,11 @@ const Home: NextPage = () => {
           </li>
           <li>CSS reset via <code>CssBaseline</code></li>
           <li><code>tailwindcss</code></li>
+          <li>Simple header/footer layout</li>
+          <li>Image usage</li>
         </ul>
       </Container>
+      <Footer/>
     </Container>
   );
 };

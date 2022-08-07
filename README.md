@@ -9,5 +9,7 @@ It contains the following:
 - A two-color theme
 - CSS reset via `CssBaseline`
 - `tailwindcss`
+- Simple header/footer layout
+- Image usage
 
 [Colby M. White]: https://github.com/colbywhite/
